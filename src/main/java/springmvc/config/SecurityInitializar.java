@@ -1,5 +1,7 @@
 package springmvc.config;
 
-public class SecurityInitializar {
+import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
+
+public class SecurityInitializar extends AbstractSecurityWebApplicationInitializer{
 
 }
