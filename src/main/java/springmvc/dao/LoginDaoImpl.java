@@ -51,8 +51,9 @@ public class LoginDaoImpl implements LoginDao{
 	}
 
 	public List<String> getRol(String nombre) {
-		// TODO Auto-generated method stub
-		return null;
+		String query= "select nombre from Rol WHERE usuario=:usuario";
+		List<String> roles = namedParameterJdbcTemplate.queryForList(query, getSqlParameterByModel(nombre, ""), String.class);
+		  return roles;
 	}
 
 }
