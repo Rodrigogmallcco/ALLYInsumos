@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class LoginController {
+public class LoginController //Redireccion de vista
+{
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	 public ModelAndView login(@RequestParam(value="error", required = false) String error){
 	  

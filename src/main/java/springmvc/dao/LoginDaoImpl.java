@@ -21,7 +21,7 @@ public class LoginDaoImpl implements LoginDao{
 	{
 		this.namedParameterJdbcTemplate=namedParameterJdbcTemplate;
 	}
-
+	//Validacion con el usuario y contraseña
 	public Usuario findUsuario(String usuario) {
 		String query= "Select * from Usuario when usuario= :usuario";
 		try {
@@ -49,7 +49,7 @@ public class LoginDaoImpl implements LoginDao{
 		} 
 		
 	}
-
+//Validacion del rol que llevara el usuario 
 	public List<String> getRol(String nombre) {
 		String query= "select nombre from Rol WHERE usuario=:usuario";
 		List<String> roles = namedParameterJdbcTemplate.queryForList(query, getSqlParameterByModel(nombre, ""), String.class);

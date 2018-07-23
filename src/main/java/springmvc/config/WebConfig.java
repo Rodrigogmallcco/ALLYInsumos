@@ -25,7 +25,7 @@ public class WebConfig extends WebMvcConfigurerAdapter{
  public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate(){
 	 return new NamedParameterJdbcTemplate(dataSource);
  }
- @Bean 
+ @Bean //Configuracion para la conexion en la base de datos 
  public DataSource getDataSource() throws NamingException {
 	 DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	 dataSource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -34,11 +34,11 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 	  dataSource.setUsername("");
 	  return dataSource;
 }
- @Override
+ @Override //Declaracion de la ubicacion de los Recursos a usar
  public void addResourceHandlers(ResourceHandlerRegistry RHR){
 	 RHR.addResourceHandler("/resources/**/").addResourceLocations("/resources");
  }
- @Bean
+ @Bean //Declaracion de la carpeta que contendra las vistas jsp
  public InternalResourceViewResolver viewResolver(){
 	 InternalResourceViewResolver viewResolver= new InternalResourceViewResolver();
 	 viewResolver.setViewClass(JstlView.class);
