@@ -1,0 +1,11 @@
+springmvc\dao\LoginDao.class
+springmvc\config\SecurityInitializar.class
+springmvc\model\Usuario.class
+springmvc\controller\LoginController.class
+springmvc\dao\LoginDaoImpl$UsuarioMapper.class
+springmvc\config\WebConfig.class
+springmvc\config\WebInit.class
+springmvc\dao\LoginDaoImpl.class
+springmvc\service\LoginService.class
+springmvc\config\SecurityConfig.class
+springmvc\dao\LoginDaoImpl$1.class
