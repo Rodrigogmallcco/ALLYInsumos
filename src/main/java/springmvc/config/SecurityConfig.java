@@ -14,9 +14,9 @@ import springmvc.service.LoginService;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	@Autowired
-	LoginService loginServiceImpl;
-	@Autowired public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
+		@Autowired
+		LoginService loginServiceImpl;
+		@Autowired public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
 		  auth.userDetailsService(loginServiceImpl);
 		  auth.authenticationProvider(authenticationProvider());
 		 }

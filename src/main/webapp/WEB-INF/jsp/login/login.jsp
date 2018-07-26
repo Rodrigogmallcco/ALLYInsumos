@@ -13,6 +13,10 @@
 							<td colspan="2">Login</td>
 						</tr>
 						<tr>
+							<td colspan="2" style="color:red" > <c:if test="${not empty error }">${error}></c:if> </td>
+						</tr>
+						
+						<tr>
 							<td> Usuario:</td>
 							<td> <input type="text"	 name="usuario"> </td>
 						</tr>
