@@ -29,8 +29,8 @@ public class WebConfig extends WebMvcConfigurerAdapter{
  public DataSource getDataSource() throws NamingException {
 	 DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	 dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	  dataSource.setUrl("jdbc:mysql://192.16864.2:3306/mydb");
-	  dataSource.setPassword("");
+	  dataSource.setUrl("jdbc:mysql://localhost:3306/ally");
+	  dataSource.setPassword("sabremos01");
 	  dataSource.setUsername("root");
 	  return dataSource;
 }
